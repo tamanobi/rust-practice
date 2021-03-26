@@ -1,9 +1,17 @@
+use std::collections::HashMap;
 
 fn main() {
-    let weekday = ["hogehoge", "fugafuga"];
-    let byte_buffer = [0_u8; 512];
+    let mut book = HashMap::new();
 
-    println!("{:?}", weekday);
-    println!("{:?}", byte_buffer);
-    // dbg!(&weekday);
+    book.insert("hogehoge".to_string(), "My favorite".to_string());
+    book.insert("fugafuga".to_string(), "My favorite".to_string());
+    dbg!(&book);
+}
+
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn exploration() {
+        assert_eq!(2 + 2, 4);
+    }
 }
