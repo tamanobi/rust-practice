@@ -1,6 +1,9 @@
 
 fn main() {
-    let v = vec![1, 2, 3];
-    let does_not_exit = v[100];
-    println!("{:?}", does_not_exit);
+    let weekday = ["hogehoge", "fugafuga"];
+    let byte_buffer = [0_u8; 512];
+
+    println!("{:?}", weekday);
+    println!("{:?}", byte_buffer);
+    // dbg!(&weekday);
 }
