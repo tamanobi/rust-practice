@@ -6,7 +6,8 @@ fn main() {
     book.insert("hogehoge".to_string(), "My favorite".to_string());
     book.insert("fugafuga".to_string(), "My favorite".to_string());
     dbg!(&book);
-    indexing_tuple()
+    indexing_tuple();
+    fruit_basket();
 }
 
 fn indexing_tuple() {
@@ -20,6 +21,17 @@ fn indexing_tuple() {
     second
     )
 }
+fn fruit_basket() -> HashMap<String, u32> {
+    let mut basket = HashMap::new(); // TODO: declare your hash map here.
+
+    // Two bananas are already given for you :)
+    basket.insert(String::from("banana"), 2);
+
+    // TODO: Put more fruits in your basket here.
+
+    basket
+}
+
 
 
 #[cfg(test)]
