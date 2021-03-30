@@ -12,9 +12,12 @@ fn main() {
     // indexing_tuple::perform();
     // fruit_basket::perform();
     let fruits = vec!["banana", "apple", "dragon_fruit"];
-    dbg!(&fruits.get(0));
-    let non_existent = fruits.get(1000);
-    dbg!(&non_existent);
+    for &index in [0, 1, 99].iter() {
+        match fruits.get(index) {
+            Option::Some(name) => println!("{}はおいしい", name),
+            Option::None => println!("ないよ"),
+        }
+    }
 }
 
 #[cfg(test)]
