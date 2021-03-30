@@ -1,7 +1,7 @@
 use std::collections::HashMap;
 
-mod indexing_tuple;
 mod fruit_basket;
+mod indexing_tuple;
 
 fn main() {
     // let mut book = HashMap::new();
