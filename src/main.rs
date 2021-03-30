@@ -8,13 +8,9 @@ fn main() {
 
     book.insert("hogehoge".to_string(), "My favorite".to_string());
     book.insert("fugafuga".to_string(), "My favorite".to_string());
-    // dbg!(&book);
+    dbg!(&book);
     indexing_tuple::perform();
-    let basket = fruit_basket::perform();
-    assert!(
-        basket.len() >= 2,
-        "basket must have at least three types of fruits"
-    );
+    fruit_basket::perform();
 }
 
 #[cfg(test)]

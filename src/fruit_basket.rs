@@ -7,5 +7,10 @@ pub fn perform() -> HashMap<String, u32> {
     basket.insert(String::from("banana"), 2);
     basket.insert(String::from("apple"), 3);
 
+    assert!(
+        basket.len() >= 2,
+        "basket must have at least three types of fruits"
+    );
+    assert!(basket.values().sum::<u32>() == 5);
     basket
 }
