@@ -11,7 +11,10 @@ fn main() {
     // dbg!(&book);
     // indexing_tuple::perform();
     // fruit_basket::perform();
-    panic!("やばい");
+    let fruits = vec!["banana", "apple", "dragon_fruit"];
+    dbg!(&fruits.get(0));
+    let non_existent = fruits.get(1000);
+    dbg!(&non_existent);
 }
 
 #[cfg(test)]
