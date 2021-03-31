@@ -1,5 +1,6 @@
 mod fruit_basket;
 mod indexing_tuple;
+mod safe_division;
 
 fn main() {
     // let mut book = HashMap::new();
@@ -9,13 +10,8 @@ fn main() {
     // dbg!(&book);
     // indexing_tuple::perform();
     // fruit_basket::perform();
-    let fruits = vec!["banana", "apple", "dragon_fruit"];
-    for &index in [0, 1, 99].iter() {
-        match fruits.get(index) {
-            Option::Some(name) => println!("{}はおいしい", name),
-            Option::None => println!("ないよ"),
-        }
-    }
+    dbg!(&safe_division::perform(5.0, 1.0));
+    dbg!(&safe_division::perform(5.0, 0.0));
 }
 
 #[cfg(test)]
