@@ -1,5 +1,3 @@
-use std::collections::HashMap;
-
 mod fruit_basket;
 mod indexing_tuple;
 
