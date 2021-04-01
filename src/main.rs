@@ -2,6 +2,7 @@ mod fruit_basket;
 mod indexing_tuple;
 mod safe_division;
 mod read_file_content;
+mod iter;
 
 fn main() {
     // let mut book = HashMap::new();
@@ -28,5 +29,19 @@ mod tests {
 
         assert!(read_file_content::perform(PathBuf::from("src/main.rs")).is_ok());
         assert!(read_file_content::perform(PathBuf::from("non-existent-file.txt")).is_err());
+    }
+
+    #[test]
+    fn iter() {
+        use super::iter::*;
+
+        let mut c = Counter::new(3);
+
+        assert_eq!(c.next(), Some(1));
+        assert_eq!(c.next(), Some(2));
+        assert_eq!(c.next(), Some(3));
+        assert_eq!(c.next(), None);
+        assert_eq!(c.next(), None);
+        assert_eq!(c.next(), None);
     }
 }
